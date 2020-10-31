@@ -1,0 +1,87 @@
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+
+  // about__content
+  &__content {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+
+    // about__content__title
+    &__title {
+      font-size: 72px;
+      font-weight: 400;
+      position: relative;
+
+      &::after {
+        content: "";
+        background: url("./../images/icons/ABOUT\ US.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 263.76px;
+        height: 60.1px;
+        position: absolute;
+        left: 65px;
+        bottom: 42px;
+      }
+    }
+
+    // about__content__para
+    &__para,
+    &__para > span {
+      font-weight: 300;
+      font-size: 18px;
+      letter-spacing: 0.01em;
+    }
+    &__para > span {
+      color: $red;
+    }
+    &__para:nth-child(3) {
+      margin: 40px 0 0 0;
+    }
+
+    // about__content__btn
+    &__btn {
+      align-self: flex-end;
+      padding: 8px 20px;
+      border-bottom: 1px solid $red;
+    }
+  }
+
+  // about__image
+  &__image {
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    z-index: -1;
+
+    & > img {
+      height: 100vh;
+    }
+
+    &::before {
+      content: "";
+      width: 90%;
+      height: 100vh;
+      border-left: 0.5px solid rgba(255, 255, 255, 0.7);
+      border-right: 0.5px solid rgba(255, 255, 255, 0.7);
+      position: absolute;
+      left: -30px;
+    }
+    &::after {
+      content: "";
+      background: url("./../images/icons/LELYTRAN.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 865.23px;
+      height: 166px;
+      position: absolute;
+      left: -845px;
+      bottom: 0;
+      z-index: -1;
+    }
+  }
+}
