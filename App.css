@@ -1,0 +1,325 @@
+.app {
+  width: 100%;
+  max-width: 100vw;
+  height: 100%;
+  max-height: 100vh;
+
+  position: static;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px auto;
+  padding: 0 30px 0 0;
+  max-width: 1450px;
+  width: 100%;
+  align-items: center;
+
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar__logo,
+.navbar__logo > span {
+  font-size: 24px;
+  text-decoration: underline;
+}
+.navbar__logo > span {
+  color: #df3f3f;
+}
+.navbar__menu {
+  display: flex;
+  flex-direction: column;
+}
+.navbar__menu > .navbar__menu__line:first-child {
+  width: 30px;
+  height: 2px;
+  background: #fff;
+}
+.navbar__menu > .navbar__menu__line:nth-child(2) {
+  width: 20px;
+  height: 2px;
+  background: #df3f3f;
+  margin: 6px 0 0 0;
+}
+.navbar__menu > .navbar__menu__line:nth-child(3) {
+  width: 20px;
+  height: 2px;
+  background: #fff;
+  margin: 6px 0 0 0;
+}
+.navbar__menu:hover {
+  cursor: pointer;
+}
+
+/* container */
+.container {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* sideNav */
+.sideNav {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sideNav__num:first-child {
+  margin: 0;
+}
+.sideNav__num {
+  margin: 50px 0 0 0;
+  display: flex;
+  align-items: center;
+}
+.sideNav__num > span {
+  font-size: 24px;
+}
+.sideNav__num__icon {
+  margin: 0 0 0 20px;
+}
+
+/* details */
+.details {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto;
+  max-width: 1450px;
+  width: 100%;
+  align-items: center;
+
+  font-size: 14px;
+  text-decoration: underline;
+}
+.details__address {
+  flex: 1;
+  margin: 0 0 0 40px;
+}
+
+/* home */
+.home {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home__content {
+  display: flex;
+  flex-direction: column;
+  max-width: 312px;
+}
+.home__content__title {
+  position: relative;
+}
+.home__content__title,
+.home__content__title > span {
+  font-size: 72px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.home__content__title > span {
+  color: #df3f3f;
+}
+.home__content__title::before {
+  content: "";
+  position: absolute;
+  background: url("./images/icons/BREAKFAST.svg");
+  width: 258.26px;
+  height: 45.43px;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  top: 0;
+  left: -145px;
+}
+.home__content__title::after {
+  content: "";
+  background: url("./images/icons/titleIcon.svg");
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 80px;
+  top: -10px;
+}
+.home__content__btns {
+  margin: 50px 0 0 0;
+  display: flex;
+  position: relative;
+}
+.home__content__btns::before {
+  content: "";
+  width: 113.38px;
+  height: 45.43px;
+  background: url("./images/icons/FOOD.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -120px;
+  left: -90px;
+}
+.home__content__btns__book {
+  margin: 0 40px 0 0;
+}
+.home__content__btns__book,
+.home__content__btns__menu {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+.home__content__btns__book::before,
+.home__content__btns__menu::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  bottom: -2px;
+  background: #fff;
+  clip-path: polygon(45% 0, 55% 0, 55% 100%, 45% 100%);
+  transition: 0.3s clip-path ease-in-out;
+  position: absolute;
+}
+.home__content__btns__book:hover::before,
+.home__content__btns__menu:hover::before {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.home__image {
+  max-width: 720px;
+  height: 100%;
+
+  position: relative;
+}
+.home__image::before {
+  content: "";
+  background: url("./images/icons/Sensations.svg");
+  width: 153px;
+  height: 720px;
+  right: -76px;
+  bottom: 20px;
+  position: absolute;
+}
+.home__image::after {
+  content: "";
+  height: 100vh;
+  width: 92%;
+
+  position: absolute;
+  top: 0;
+  left: -40px;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+.home__image__snack,
+.home__image__lunch {
+  position: absolute;
+  z-index: -1;
+}
+.home__image__snack {
+  top: 30px;
+  right: -135px;
+}
+.home__image__lunch {
+  left: -135px;
+  bottom: 70px;
+}
+.home__image__bg {
+  height: 100%;
+  box-shadow: -4px 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* home__bg */
+.home__bg {
+  position: absolute;
+  right: 50px;
+  bottom: 20px;
+}
+
+/* about */
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+}
+.about__content {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+.about__content__title {
+  font-size: 72px;
+  font-weight: 400;
+  position: relative;
+}
+.about__content__title::after {
+  content: "";
+  background: url("./images/icons/ABOUT\ US.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 263.76px;
+  height: 60.1px;
+  position: absolute;
+  left: 65px;
+  bottom: 42px;
+}
+.about__content__para,
+.about__content__para > span {
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 0.01em;
+}
+.about__content__para > span {
+  color: #df3f3f;
+}
+.about__content__para:nth-child(3) {
+  margin: 40px 0 0 0;
+}
+.about__content__btn {
+  align-self: flex-end;
+  padding: 8px 20px;
+  border-bottom: 1px solid #df3f3f;
+}
+.about__image {
+  position: absolute;
+  right: 0;
+  height: 100vh;
+  z-index: -1;
+}
+.about__image::before {
+  content: "";
+  width: 90%;
+  height: 100vh;
+  border-left: 0.5px solid rgba(255, 255, 255, 0.7);
+  border-right: 0.5px solid rgba(255, 255, 255, 0.7);
+  position: absolute;
+  left: -30px;
+}
+.about__image::after {
+  content: "";
+  background: url("./images/icons/LELYTRAN.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 865.23px;
+  height: 166px;
+  position: absolute;
+  left: -845px;
+  bottom: 0;
+  z-index: -1;
+}
+.about__image > img {
+  height: 100vh;
+}

@@ -1,0 +1,27 @@
+// sideNav
+.sideNav {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  z-index: 1000;
+
+  // sideNav__num
+  &__num {
+    margin: 50px 0 0 0;
+    display: flex;
+    align-items: center;
+
+    // sideNav__num__icon
+    &__icon {
+      margin: 0 0 0 20px;
+    }
+  }
+  // sideNav__one
+  &__one {
+    margin: 0;
+  }
+}
